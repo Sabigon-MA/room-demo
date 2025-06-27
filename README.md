@@ -1,12 +1,55 @@
-# React + Vite
+# Maze Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+このプロジェクトは、React + Vite + three.js（@react-three/fiber, drei）を使った3D迷路ゲームです。
 
-Currently, two official plugins are available:
+## 主な機能
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 3D空間内をWASDキーで移動
+- Shiftキーで走る（速度アップ）
+- マウスで視点操作（PointerLock対応）
+- 壁との当たり判定あり（壁抜け不可）
+- テクスチャ付きの床・壁・天井
 
-## Expanding the ESLint configuration
+## 操作方法
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **クリック**：マウスロック開始
+- **W/A/S/D**：移動
+- **Shift**：走る
+- **マウス**：視点移動
+- **Esc**：マウスロック解除
+
+## 開発・実行
+
+```bash
+npm install
+npm run dev
+```
+
+## 依存ライブラリ
+
+- React
+- Vite
+- three.js
+- @react-three/fiber
+- @react-three/drei
+
+## ディレクトリ構成例
+
+```
+maze-game/
+├─ public/
+│  └─ textures/
+│      ├─ yuka.jpg
+│      └─ wall.jpg
+├─ src/
+│  ├─ components/
+│  │   └─ PlayerControls.jsx
+│  ├─ App.jsx
+│  └─ ...
+└─ README.md
+```
+
+## 備考
+
+- テクスチャ画像は `public/textures/` 配下に配置してください。
+- コードのカスタマイズや拡張も自由にどうぞ。
